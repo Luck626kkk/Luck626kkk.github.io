@@ -6,10 +6,58 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel=stylesheet type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Lato" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="wrap">
-        <p>hellow world</p>
+        <div class="haeder">
+            <div class="header-bar">
+                <div class="logo">
+                    <img src="images/L.png" alt="">
+                    <h2>Luck</h2>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="#">PROFILE</a></li>
+                        <li><a href="#">SKILLS</a></li>
+                        <li><a href="#">PORTFOLIO</a></li>
+                        <li><a href="#">CONTACT</a></li>
+                    </ul>
+                </div>
+                <div class="hamber-menu">
+                    <img src="images/burgerIcon.png" alt="burgerIcon">
+                </div>
+            </div>
+            <div class="title">
+                <h2>Hello I'm Luck</h2>
+                <h2>Welcome to my website</h2>
+            </div>
+        </div>
+        <div class="profile">
+            <h2>Personal Profile</h2>
+            <hr>
+            <div class="pro-detail">
+                <img class="bighead"src="images/luck.jpg" alt="Luck">
+                <div class="introduction">
+                    <p>...</p>
+                </div>
+            </div>
+        </div>
+        <div class="skills">
+            <h2>Skills</h2>
+            <hr>
+        </div>
     </div>
+    
 </body>
+<script type="text/javascript">
+    $(document).ready(function() {
+       $('.hamber-menu').on('click',  function(e){
+          e.preventDefault();
+          $('body').toggleClass('menu-show');
+      });
+    });
+  </script>
 </html>

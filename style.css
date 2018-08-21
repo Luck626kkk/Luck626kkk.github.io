@@ -1,0 +1,233 @@
+/* Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+    vertical-align: baseline;
+    list-style: none;
+    text-decoration: none;
+}
+/*-----------------------------------------------*/
+.wrap{
+    max-width: 100%;
+}
+.haeder{
+    max-width: 100%;
+    height: 100vh;
+    background-image: url("images/dream.jpg");
+    -moz-background-size:cover;
+    -webkit-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover;
+    position: relative;
+}
+
+.header-bar{
+    position: fixed;
+    width:100%;
+    height: 70px;
+    background: rgb(38, 39, 40, .7);
+    clear: both;
+    animation: myfirst 2s;
+}
+@keyframes myfirst{
+    from {height:0;opacity: 0;}
+    to {height:70px;opacity: 1;}
+}
+.header-bar > .logo{
+    float: left;
+    width: 250px;
+    height: 60px;
+    margin: 10px 0 0 20px;
+    clear: both;
+}
+.logo > img{
+    float: left;
+    vertical-align:text-bottom;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+.logo > h2{
+    font-size: 2.5rem;
+    padding-left: 70px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 650;
+    color:white;
+    letter-spacing: 1.8px;
+}
+.header-bar > .menu{
+    float: right;
+    margin-top: 15px;
+}
+.menu > ul li{
+    float:left;
+    padding: 5px 20px 5px 20px;
+}
+.menu > ul li > a{
+    font-size: 1.1rem;
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    color: rgb(176, 178, 183);
+}
+.hamber-menu img{
+    display: none;
+}
+.title{
+    position: absolute;
+    background: rgba(120, 125, 135,0.4);
+    width:50%;
+    top:300px;
+    left:0;
+    right:0;
+    margin-left:auto;
+    margin-right:auto;
+    font-family: 'Indie Flower', cursive;
+    font-size: 3.5rem;
+    text-align: center;
+    color: white;
+    font-weight: 700;
+}
+/*profile----------------------------------------------------------*/
+.profile{
+    max-width:100%;
+    min-height: 680px;
+    margin: 30px auto;
+}
+.profile > h2{
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-size: 3rem;
+}
+.profile > hr{
+    border: 0;
+    height: 4px;
+    background-color: black;
+    width: 200px;
+    margin: 10px auto;
+}
+.pro-detail{
+    margin-top: 20px;
+    clear: both;
+}
+.bighead{
+    float: left;
+    width: 32%;
+    height: 600px;
+    margin-left: 3%;
+}
+.introduction{
+    float: left;
+    width: 60%;
+    margin-left: 2%;
+    height: 600px;
+    border: 1px solid #111;
+}
+.introduction > p{
+   
+}
+
+
+/*skills--------------------------------------*/
+.skills{
+    width: 100%;
+    height: 600px;
+    margin-top: 50px;
+    background: blanchedalmond;
+}
+.skills > h2{
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-size: 3rem;
+} 
+.skills > hr{
+    border: 0;
+    height: 4px;
+    background-color: black;
+    width: 70px;
+    margin: 10px auto;
+}
+
+
+/*-----------------------------------------------------------------------------------------------*/
+@media (max-width: 767px){
+    .haeder{
+        max-width: 100%;
+        height: 100vh;
+        background-image: url("images/laptop.jpg");
+        -moz-background-size: contain;
+        -webkit-background-size:contain;
+        -o-background-size:contain;
+        background-size:cover;
+    }
+    .menu {
+        /*隱藏選單開始*/
+        max-height: 0px;
+        overflow: hidden;
+        /*隱藏選單結束*/
+        transition: max-height .8s;
+        /*絕對定位疊在網頁上*/
+        position: absolute;
+        z-index: 100;
+        top: 56px;
+        left: 0;
+        right: 0;
+        background: rgba(144, 146, 150, .5);
+    }
+    .hamber-menu img{
+        display: block;
+        width: 65px;
+        height: 65px;
+        float: right;
+        cursor: pointer;
+    }
+    .menu > ul li{
+        float: none;
+        border-bottom: 2px solid black;
+        padding: 10px;
+        margin: 0;
+        text-align: center;
+    }
+    .menu > ul li > a{
+        color: black;
+    }
+    /*jQ點擊後動態在 body 加上 class */
+    .menu-show .menu{
+        max-height: 500px
+    }
+    .title{
+        font-size: 2rem;
+    }
+
+    /*profile------------------------*/
+    .bighead{
+        display: block;
+        float: none;
+        width: 85%;
+        height: 450px;
+        margin: 0 auto;
+    }
+    .introduction{
+        float: none;
+        width: 85%;
+        margin: 25px auto;
+        height: 600px;
+        border: 1px solid #111;
+        
+    }
+}
+    
