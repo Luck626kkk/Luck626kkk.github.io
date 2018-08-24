@@ -111,7 +111,7 @@ time, mark, audio, video {
 .profile > h2{
     text-align: center;
     font-family: 'Lato', sans-serif;
-    font-size: 3rem;
+    font-size: 2.2rem;
 }
 .profile > hr{
     border: 0;
@@ -137,31 +137,49 @@ time, mark, audio, video {
     height: 600px;
     border: 1px solid #111;
 }
-.introduction > p{
-   
-}
 
 
-/*skills--------------------------------------*/
-.skills{
-    width: 100%;
-    height: 600px;
+
+/*portfolio--------------------------------------*/
+.portfolio{
+    width: 98%;
+    margin-right: 1%;
+    margin-left: 1%;
     margin-top: 50px;
-    background: blanchedalmond;
 }
-.skills > h2{
+.portfolio > h2{
     text-align: center;
     font-family: 'Lato', sans-serif;
-    font-size: 3rem;
+    font-size: 2.2rem;
 } 
-.skills > hr{
+.portfolio > hr{
     border: 0;
     height: 4px;
     background-color: black;
-    width: 70px;
+    width: 100px;
     margin: 10px auto;
 }
-
+.portfolios{
+    max-width: 880px;
+    height: 600px;
+    margin: 0 auto;
+    clear: both;
+}
+.portfolios > a{
+    float:left;
+    width: 45%;
+    height: 240px;
+    margin: 2.5%;  
+}
+.portfolios > a > img{
+    width:100%;
+    height: 100%;
+}
+.portfolios > a > img:hover{
+    transform: scale(1.1, 1.1);
+    transition: all .5s ease;
+    box-shadow: 2px 2px 5px #888888;
+}
 
 /*-----------------------------------------------------------------------------------------------*/
 @media (max-width: 767px){
@@ -173,6 +191,9 @@ time, mark, audio, video {
         -webkit-background-size:contain;
         -o-background-size:contain;
         background-size:cover;
+    }
+    .logo {
+        width: 30%;
     }
     .menu {
         /*隱藏選單開始*/
@@ -227,7 +248,18 @@ time, mark, audio, video {
         margin: 25px auto;
         height: 600px;
         border: 1px solid #111;
-        
+    }
+
+    /*portfolio--------------------------------------*/
+    .portfolios > a{
+        display: block;
+        width: 90%;
+        height: 240px;
+        margin: 5%;  
+        float: none;
+    }
+    .portfolios > a > img{
+       
     }
 }
     
