@@ -126,16 +126,16 @@ time, mark, audio, video {
 }
 .bighead{
     float: left;
-    width: 30%;
-    height: 600px;
+    width:  380px;
+    height: 500px;
     margin-left: 5%;
     margin-right: 2%;
 }
 .introduction{
     float: left;
-    width: 58%;
+    width: calc(88% - 380px);
     margin-right: 5%;
-    height: 600px;
+    height: 500px;
     border: 1px solid #111;
     box-sizing: border-box;
 }
