@@ -104,9 +104,9 @@ time, mark, audio, video {
 }
 /*profile----------------------------------------------------------*/
 .profile{
-    max-width:100%;
+    max-width:96%;
     min-height: 680px;
-    margin: 30px auto;
+    margin: 30px 2%;
 }
 .profile > h2{
     text-align: center;
@@ -126,16 +126,18 @@ time, mark, audio, video {
 }
 .bighead{
     float: left;
-    width: 32%;
+    width: 30%;
     height: 600px;
-    margin-left: 3%;
+    margin-left: 5%;
+    margin-right: 2%;
 }
 .introduction{
     float: left;
-    width: 60%;
-    margin-left: 2%;
+    width: 58%;
+    margin-right: 5%;
     height: 600px;
     border: 1px solid #111;
+    box-sizing: border-box;
 }
 
 
