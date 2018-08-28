@@ -34,6 +34,7 @@ time, mark, audio, video {
     -o-background-size:cover;
     background-size:cover;
     position: relative;
+    
 }
 
 .header-bar{
@@ -181,6 +182,34 @@ time, mark, audio, video {
     transform: scale(1.1, 1.1);
     transition: all .5s ease;
     box-shadow: 2px 2px 5px #888888;
+}
+/*contact--------------------------------------*/
+.contact{
+    width: 100%;
+    margin-top: 50px;
+    background: gray;
+}
+.contact > h2{
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-size: 2.2rem;
+    color: #000;
+}
+.contact > hr{
+    border: 0;
+    height: 4px;
+    background-color: #000;
+    width: 75px;
+    margin: 10px auto;
+}
+.social{
+    max-width: 120px;
+    margin:0 auto;
+}
+.social > img{
+    display: inline-block;
+    width: 45%;
+    
 }
 
 /*-----------------------------------------------------------------------------------------------*/
