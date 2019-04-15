@@ -20,9 +20,9 @@
                 </div>
                 <div class="menu">
                     <ul>
-                        <li><a href="#">PROFILE</a></li>
-                        <li><a href="#">PORTFOLIO</a></li>
-                        <li><a href="#">CONTACT</a></li>
+                        <li class="top-profile">PROFILE</li>
+                        <li class="top-portfolio">PORTFOLIO</li>
+                        <li class="top-contact">CONTACT</li>
                     </ul>
                 </div>
                 <div class="hamber-menu">
@@ -40,26 +40,48 @@
             <div class="pro-detail">
                 <img class="bighead"src="images/luck.jpg" alt="Luck">
                 <div class="introduction">
-                    <p>...</p>
+                    <p class="p-first">我是吳昕釗 (Luck)，今年22歲，現居新北汐止</p>
+                    <ul>
+                    　<li>畢業於 國立臺北商業大學 資訊管理系 二技部 (2018)</li>
+                    　<li>畢業於 國立臺北商業大學 資訊管理科 五專部 (2016)</li>
+                    </ul>
+                    <p class="p-mid"> 我開始接觸網頁的時間點算比較晚的，在五專和二技的專題製作都是開發，
+                        Android App 的，所以在學期間幾乎都沒有碰到網頁。因為畢業需要實習學分，
+                        而大多的實習機會都是需要會網頁技術的，當時讓我找了很久才找到一份在 MyMusic 
+                        當測試員的實習機會。
+                    </p>
+                    <p class="p-mid"> 因此讓我感覺 App 方面的工作似乎不太好找。到了大四下學期，
+                        也開始對於未來有一點迷茫，於是在 Udmey 上重頭開始的學習 HTML /CSS / Javascript / Jquery 
+                        初學的時候真的是有點生疏，很多基礎的東西都不會，看過兩、三課程後才慢慢地比較了解網頁。
+                        之後就開始學習 React 會選擇 React 是因為大學期間都是做 Android 很好奇 ReactNative 是如何
+                        一次的完成兩種平台的 App ，所以才選擇這個框架來學習。
+                    </p>
+                   
                 </div>
+                <div style="clear:both"></div>
             </div>
         </div>
         <div class="portfolio">
             <h2>Portfolio</h2>
             <hr>
             <div class="portfolios">
-                <a href="/RWD_homework" target="_blank"><img src="images/rwd.PNG" alt="rwd"></a>
-                <a href="/react_chatroom" target="_blank"><img src="images/chatroom.PNG" alt="chatroom"></a>
-                <a href="/taipei_park" target="_blank"><img src="images/taipeipark.PNG" alt="taipeipark"></a>
-                <a href="/puzzle" target="_blank"><img src="images/puzzle.PNG" alt="puzzle"></a>
+                <a href="/RWD_homework" target="_blank"><img src="images/rwd.PNG" alt="rwd">RWD版面練習</a>
+                <a href="/react_chatroom" target="_blank"><img src="images/chatroom.PNG" alt="chatroom">React with firebase 聊天室</a>
+                <a href="/taipei_park" target="_blank"><img src="images/taipeipark.PNG" alt="taipeipark">台北市公園景點查詢</a>
+                <a href="/puzzle" target="_blank"><img src="images/puzzle.PNG" alt="puzzle">拚圖</a>
+                <a href="/upload_image" target="_blank"><img src="images/upload_image.png" alt="upload_image">裁剪圖片</a>
+                <a href="/F2E-Filter" target="_blank"><img src="images/F2E-Filter.png" alt="/F2E-Filter">高雄旅遊景點查詢</a>
+
+                <div style="clear:both"></div>
             </div>
         </div>
         <div class="contact">
             <h2>Contact</h2>
             <hr>
             <div class="social">
-                <img src="images/facebook-logo.png" alt="">
-                <img src="images/github-logo.png" alt="">
+                <a href="https://www.facebook.com/profile.php?id=100000274209768&ref=bookmarks"><img src="images/facebook-logo.png" alt=""></a>
+                <a href="https://github.com/Luck626kkk"><img src="images/github-logo.png" alt=""></a>
+                <div style="clear:both"></div>
             </div>
         </div>
     </div>
@@ -67,10 +89,28 @@
 </body>
 <script type="text/javascript">
     $(document).ready(function() {
-       $('.hamber-menu').on('click',  function(e){
-          e.preventDefault();
-          $('body').toggleClass('menu-show');
-      });
+        $('.hamber-menu').on('click',  function(e){
+            e.preventDefault();
+            $('body').toggleClass('menu-show');
+        });
+        $(".top-profile").click(function (){
+            $('html, body').animate({
+                scrollTop: $(".profile").offset().top
+            },);
+        });
+        $(".top-portfolio").click(function (){
+            $('html, body').animate({
+                scrollTop: $(".portfolio").offset().top
+            },);
+        });
+        $(".top-contact").click(function (){
+            $('html, body').animate({
+                scrollTop: $(".contact").offset().top
+            },);
+        });
+
+
+
     });
   </script>
 </html>

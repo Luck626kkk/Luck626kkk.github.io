@@ -24,11 +24,12 @@ time, mark, audio, video {
 /*-----------------------------------------------*/
 .wrap{
     max-width: 100%;
+        font-family: Montserrat,Helvetica,arial,Microsoft JhengHei,"微軟正黑體",sans-serif;
 }
 .haeder{
     max-width: 100%;
     height: 100vh;
-    background-image: url("images/dream.jpg");
+    background-image: url("images/dream-compressor.jpg");
     -moz-background-size:cover;
     -webkit-background-size:cover;
     -o-background-size:cover;
@@ -73,17 +74,24 @@ time, mark, audio, video {
 }
 .header-bar > .menu{
     float: right;
-    margin-top: 15px;
+    margin-top: 10px;
 }
 .menu > ul li{
     float:left;
-    padding: 5px 20px 5px 20px;
-}
-.menu > ul li > a{
-    font-size: 1.1rem;
+    padding: 15px 20px 15px 20px;
     font-family: 'Lato', sans-serif;
     font-weight: 600;
-    color: rgb(176, 178, 183);
+    color:  black;
+    font-size: 1.1rem;
+    border-radius: 40%;
+    cursor: pointer;
+  
+}
+
+.menu > ul li:hover{
+    color: black;
+    background: white;
+    
 }
 .hamber-menu img{
     display: none;
@@ -105,9 +113,9 @@ time, mark, audio, video {
 }
 /*profile----------------------------------------------------------*/
 .profile{
-    max-width:96%;
+    max-width:85%;
     min-height: 680px;
-    margin: 30px 2%;
+    margin: 30px 12.5%;
 }
 .profile > h2{
     text-align: center;
@@ -122,6 +130,7 @@ time, mark, audio, video {
     margin: 10px auto;
 }
 .pro-detail{
+    width: 100%;
     margin-top: 20px;
     clear: both;
 }
@@ -130,25 +139,41 @@ time, mark, audio, video {
     width:  380px;
     height: 500px;
     margin-left: 5%;
-    margin-right: 2%;
+    margin-right: 5%;
 }
 .introduction{
     float: left;
-    width: calc(88% - 380px);
-    margin-right: 5%;
-    height: 500px;
-    border: 1px solid #111;
+    width: calc(80% - 380px);
+
     box-sizing: border-box;
+    color: #444444;
+    font-size: 18px;
+    text-align: justify;
+}
+.introduction >.p-first{
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 18px;
+}
+.introduction > ul > li{
+    list-style-type:none;
+    line-height: 25px;
+}   
+.p-mid{
+    margin-top: 50px;
+    line-height: 25px;
+    text-indent: 50px
 }
 
 
 
 /*portfolio--------------------------------------*/
 .portfolio{
-    width: 98%;
-    margin-right: 1%;
-    margin-left: 1%;
+    width: 85%;
+    margin-right: 12.5%;
+    margin-left: 12.5%;
     margin-top: 50px;
+    min-height: 600px;
 }
 .portfolio > h2{
     text-align: center;
@@ -163,20 +188,25 @@ time, mark, audio, video {
     margin: 10px auto;
 }
 .portfolios{
-    max-width: 880px;
-    height: 600px;
+    width: 100%;
     margin: 0 auto;
-    clear: both;
 }
 .portfolios > a{
+    display: block;
     float:left;
     width: 45%;
     height: 240px;
     margin: 2.5%;  
+    text-align: center;
+    color: #000;
+    margin-bottom: 40px;
+    font-size: 18px;
 }
 .portfolios > a > img{
-    width:100%;
-    height: 100%;
+    display: block;
+    width: 450px;
+    height: 280px;
+    margin: 0 auto;
 }
 .portfolios > a > img:hover{
     transform: scale(1.1, 1.1);
@@ -186,8 +216,9 @@ time, mark, audio, video {
 /*contact--------------------------------------*/
 .contact{
     width: 100%;
-    margin-top: 50px;
+    margin-top: 70px;
     background: gray;
+    height: 150px;
 }
 .contact > h2{
     text-align: center;
@@ -203,17 +234,20 @@ time, mark, audio, video {
     margin: 10px auto;
 }
 .social{
-    max-width: 120px;
+    max-width: 200px;
     margin:0 auto;
 }
-.social > img{
-    display: inline-block;
-    width: 45%;
+.social > a{
+    display: block;
+    float: left;
+    margin: 5% ;
+    width: 40%;
+    height: 25px;
     
 }
 
 /*-----------------------------------------------------------------------------------------------*/
-@media (max-width: 767px){
+@media (max-width: 800px){
     .haeder{
         max-width: 100%;
         height: 100vh;
@@ -266,31 +300,55 @@ time, mark, audio, video {
     }
 
     /*profile------------------------*/
+
     .bighead{
         display: block;
         float: none;
         width: 85%;
-        height: 450px;
+        height: 350px;
         margin: 0 auto;
     }
     .introduction{
         float: none;
         width: 85%;
         margin: 25px auto;
-        height: 600px;
+        
         border: 1px solid #111;
     }
 
     /*portfolio--------------------------------------*/
+    .portfolio{
+        width: 90%;
+        margin-right: 5%;
+        margin-left: 5%;
+    }
     .portfolios > a{
         display: block;
-        width: 90%;
-        height: 240px;
-        margin: 5%;  
         float: none;
-    }
-    .portfolios > a > img{
+        width: 390px;
+        height: 280px;
+        margin: 0 auto;
+        margin-bottom: 50px;
        
     }
+    .portfolios > a > img{
+       width: 100%;
+    }
 }
-    
+@media (max-width: 400px){
+
+    .portfolios > a{
+        display: block;
+        float: none;
+        width: 250px;
+        height: 150px;
+        margin: 0 auto;
+        margin-bottom: 50px;
+       
+    }
+    .portfolios > a > img{
+        float: none;
+       width: 100%;
+       height: 150px;
+    }
+} 
